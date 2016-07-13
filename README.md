@@ -1,26 +1,34 @@
-# Ember-dashboard
+# ember-dashboard
 
-This README outlines the details of collaborating on this Ember addon.
+[WIP]
+
+A dashboard with a view into your ember app's size over time.
+Use [ember-cli-deploy-asset-sizes](https://github.com/kiwiupover/ember-cli-deploy-asset-sizes) to push your apps data to [keen.io](https://keen.io).
+
+More data addons to come.
 
 ## Installation
+Create brandnew ember app.
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```sh
+ember new <my-ember-apps-name>-dashboard
+ember install ember-dashboard
+```
 
-## Running
+Add your keen.io keys to `config/environment.js`
 
-* `ember serve`
-* Visit your app at http://localhost:4200.
+```js
+KEEN_PROJECT_ID: <keen-project-id>,
+KEEN_READ_KEY: <keen-read-key>
+```
 
-## Running Tests
+## Deploy
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+```sh
+ember surge
+```
 
-## Building
-
-* `ember build`
+## You're Done.
+Visit your dashboard on <my-ember-apps-name>-dashboard.surge.sh
 
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).

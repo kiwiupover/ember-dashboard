@@ -1,0 +1,1 @@
+export { default } from 'ember-dashboard/components/assets-graph/component';
