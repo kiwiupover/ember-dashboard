@@ -6,13 +6,13 @@ export default Ember.Route.extend({
   model() {
     return this.get('keen').query('average', 'deploy', {
       target_property: 'size',
-      timeframe: 'this_30_days',
+      timeframe: 'this_6_days',
       group_by: 'name',
-      interval: 'hourly'
+      interval: 'minutely'
     }).then(function(data) {
 
       let results = data.result.filter( (asset)=> {
-        let vendorJs = asset.value[4];
+        let vendorJs = asset.value[3];
         if(vendorJs.result > 0) {
           return asset;
         }
