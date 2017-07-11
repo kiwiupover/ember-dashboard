@@ -1,6 +1,6 @@
 {
   "name": "ember-dashboard",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A dashboard for your ember application.",
   "directories": {
     "doc": "doc",
