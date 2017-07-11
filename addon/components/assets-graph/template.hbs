@@ -1,1 +1,5 @@
-{{high-charts content=chartData chartOptions=chartOptions}}
+{{#if noData}}
+  {{ember-spinner}}
+{{else}}
+  {{high-charts content=chartData chartOptions=chartOptions}}
+{{/if}}

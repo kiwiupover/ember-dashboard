@@ -6,9 +6,9 @@ export default Ember.Route.extend({
   model() {
     return this.get('keen').query('average', 'deploy', {
       target_property: 'size',
-      timeframe: 'this_6_days',
+      timeframe: 'this_90_days',
       group_by: 'name',
-      interval: 'minutely'
+      interval: 'hourly'
     }).then(function(data) {
 
       let results = data.result.filter( (asset)=> {
