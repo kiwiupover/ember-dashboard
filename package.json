@@ -9,7 +9,8 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember try:each",
+    "publish:patch": "npm whoami && npm version patch && git push origin --tags && npm publish"
   },
   "repository": "https://github.com/kiwiupover/ember-dashboard",
   "engines": {
