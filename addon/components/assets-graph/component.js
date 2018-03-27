@@ -1,11 +1,12 @@
-import Ember from 'ember';
 import moment from 'moment';
 import layout from './template';
-import computed from 'ember-computed';
+import Component from '@ember/component';
+import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout,
-  keen: Ember.inject.service('keen'),
+  keen: service('keen'),
   dateRange: 'this_30_days',
 
   init() {

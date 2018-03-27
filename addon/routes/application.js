@@ -1,7 +1,8 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
-export default Ember.Route.extend({
-  keen: Ember.inject.service('keen'),
+export default Route.extend({
+  keen: service('keen'),
 
   model() {
     return this.get('keen').query('average', 'deploy', {
